@@ -1,0 +1,121 @@
+[
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.scope"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Bootstrap task and authorized boundary",
+      "body": "Initialize a dedicated persistent PostgreSQL gyld_db_ui database through the existing Gyld DB schema-init and bootstrap route. Create the operational UI project, default Lens and initial session. Preserve existing databases/data. Verify delivered context, reconnect and logical export. Changes are limited to gyld-db-ui reusable setup instructions/inputs, database runtime state and private gyld-db-evidence captures. gyld-db is reference-only. No UI implementation, framework selection, commits or publication is authorized in this bootstrap task."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.requirements"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Initial requirements",
+      "body": "The UI is the first dogfooding project managed using Gyld DB. Project requirements, design questions, decisions, work items and generated knowledge remain authoritative as versioned project Documents in this database. The default project Lens must deliver all required shared protocol/bootstrap Document roots and ordered parts as full available fields, together with project knowledge. Normal changes use the controlled JSON protocol, scoped symbolic names or lowercase returned UUID references and database-generated change numbers. PostgreSQL data files remain outside Git; captured outputs and logical exports go to the private evidence repository. No UI framework/scaffold has been selected."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.ontology"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Initial knowledge representation and pending ontology",
+      "body": "Reuse the installed Concept, Property, Axis, Lens, Artifact and Document definitions. The operational project is the Artifact marker returned by project.init, separate from any future domain Project concept. Initial requirements, questions and work items are independently addressable Document parts under gyld.ui.setup. Every UI Lens and Document/part carries the actual operational project reference. No custom UI domain ontology is specified; selection of additional Concepts/Properties/relationships remains pending an authorized UI design task."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.questions"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Open design questions",
+      "body": "Pending: what user workflows and acceptance criteria should the UI implement; which UI framework/runtime and repository scaffold should be chosen; which domain Concepts and typed relationships are needed beyond the shared kernel; how should the UI expose session/handle/Lens selection and versioned Document parts? These questions record gaps; they do not select a design or authorize implementation."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.work-items"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Initial work items",
+      "body": "Bootstrap: create dedicated persistent database, install schema/kernel, operational project, Lens and session; read back and export evidence. Next separate task: retrieve and acknowledge complete project context, obtain the UI workflow requirements, choose the minimal domain ontology/design, then plan UI implementation. UI code belongs under src/ only after implementation authorization. Do not treat optional infrastructure or dependency improvements as bootstrap prerequisites."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup.handoff"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Bootstrap handoff",
+      "body": "Bootstrap is underway. Actual durable identities and verification outcomes will be patched here before reset. A continuation must use the current session/instance pair, fetch full available context and acknowledge its exact delivery token; reconstruct shared protocol/bootstrap and project Document children in order. No UI code has been created."
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.setup"
+    },
+    "concept_ref": {
+      "name": "Document"
+    },
+    "named_properties": {
+      "title": "Gyld DB UI initial project context",
+      "children": [
+        "gyld.ui.setup.scope",
+        "gyld.ui.setup.requirements",
+        "gyld.ui.setup.ontology",
+        "gyld.ui.setup.questions",
+        "gyld.ui.setup.work-items",
+        "gyld.ui.setup.handoff"
+      ]
+    }
+  },
+  {
+    "mode": "create",
+    "record_ref": {
+      "name": "gyld.ui.default"
+    },
+    "concept_ref": {
+      "name": "Lens"
+    },
+    "named_properties": {
+      "title": "Gyld DB UI default project context",
+      "description": "Deliver shared schema, protocol/bootstrap Documents and all selected-project knowledge with full available fields.",
+      "selection": [
+        "Concept",
+        "Property",
+        "Axis",
+        "Lens",
+        "Artifact"
+      ],
+      "shared_only": false
+    }
+  }
+]
